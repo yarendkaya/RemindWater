@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("com.google.dagger.hilt.android")
     alias(libs.plugins.ksp)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -69,4 +70,7 @@ dependencies {
 
     implementation(libs.coil)
     implementation(libs.coil.network)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
 }
